@@ -14,7 +14,6 @@ class Image
     end
   end
 
-  # what is this doing? transforming
   def blur(row_index, col_index)
     if row_index != 0
       @img[row_index-1][col_index] = 1
@@ -31,26 +30,19 @@ class Image
     end
   end
 
-  # build new img and return blurred img
   def transform
     one_pixels = []
-    # loop through all pixels, find 1s and store in one_pixels array
-    # touple, one_pixels is array of arrays
     @img.each_with_index do |row, row_index|
       row.each_with_index do |pixel, col_index|
-        # finding ones and adding to array
         if pixel == 1
           one_pixels.push([row_index, col_index])
         end
     end
   end
-
-# cycle through one_pixel and blur those pixels
-    one_pixels.each do |pair|
-    row_index, col_index = pair
+    one_pixels.each do |row_col|
+    row_index, col_index = row_col
     blur(row_index, col_index)
   end
-
     return Image.new(@img)
   end
 end
