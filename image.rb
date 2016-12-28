@@ -23,3 +23,10 @@ image = Image.new([
   [0, 0, 0, 0]
 ])
 image.output_image
+
+# alt output method below
+  # def output_image
+  #   @image.each do |row|
+  #     puts row.join
+  #   end
+  # end
