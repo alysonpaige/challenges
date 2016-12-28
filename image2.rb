@@ -8,8 +8,9 @@ class Image
     @image.each do |row|
       row.each do |pixel|
         print pixel
+      end
+      puts
     end
-    puts
   end
 
   # build new img and return blurred img
@@ -20,6 +21,7 @@ class Image
       row.each_with_index do |pixel, col_index|
         if pixel == 1
           # do more stuff
+          @one_pixels
         else
           # do more stuff
         end

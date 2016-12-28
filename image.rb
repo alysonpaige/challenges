@@ -6,7 +6,11 @@ class Image
 
   def output_image
     @image.each do |row|
-      puts row.join
+      row.each do |pixel|
+        print pixel
+      end
+      # puts here acts as line break
+      puts
     end
   end
 
