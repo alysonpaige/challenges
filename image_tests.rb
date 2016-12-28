@@ -29,3 +29,19 @@ image = Image.new([
   [0, 0, 0, 0]
 ])
 image.output_image
+
+
+# notes
+  # def find_ones
+  #   positions = []
+  #   @image.each_with_index do |row, row_index|
+  #       puts "row", row.inspect
+  #       puts "row_index", row_index
+  #     row.each_with_index do |number, number_index|
+  #       if number == 1
+          
+  #       puts "number", number
+  #       puts "number_index", number_index
+  #     end
+  #   end
+  # end
