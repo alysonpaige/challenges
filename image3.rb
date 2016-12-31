@@ -29,8 +29,7 @@ class Image
           one_pixels.push([row_index, col_index])
         end
     end
-  end
-  
+  end  
     one_pixels.each do |row_col|
     row_index, col_index = row_col
     blur(row_index, col_index)
