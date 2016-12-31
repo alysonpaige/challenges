@@ -5,15 +5,6 @@ class Image
     @img = array
   end
 
-  def output_image
-    @img.each do |row|
-      row.each do |pixel|
-        print pixel
-      end
-      puts
-    end
-  end
-
   def blur(row_index, col_index)
     if row_index != 0
       @img[row_index-1][col_index] = 1
@@ -39,12 +30,23 @@ class Image
         end
     end
   end
+  
     one_pixels.each do |row_col|
     row_index, col_index = row_col
     blur(row_index, col_index)
   end
     return Image.new(@img)
   end
+
+  def output_image
+    @img.each do |row|
+      row.each do |pixel|
+        print pixel
+      end
+      puts
+    end
+  end
+
 end
 
 img = Image.new([

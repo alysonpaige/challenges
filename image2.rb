@@ -14,8 +14,8 @@ class Image
     end
   end
 
-  # what is this doing? transforming
-  # need to understand better
+  # need to understand what is happening here
+  # and transforming better
   def blur(row_index, col_index)
     if row_index != 0
       @img[row_index-1][col_index] = 1
