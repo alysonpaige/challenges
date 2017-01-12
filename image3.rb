@@ -23,7 +23,7 @@ class Image
 
   # can I do this with an existing blur method?
   # or add one above?
-  # or change name of one above?
+  # or change method name of one above?
   def blur(distance)
   end
 
