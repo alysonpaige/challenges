@@ -21,6 +21,11 @@ class Image
     end
   end
 
+  # can we do this with an existing blur method?
+  # or modify the one above?
+  def blur(distance)
+  end
+
   def transform
     one_pixels = []
     @img.each_with_index do |row, row_index|
