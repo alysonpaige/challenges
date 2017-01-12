@@ -21,8 +21,9 @@ class Image
     end
   end
 
-  # can we do this with an existing blur method?
-  # or modify the one above?
+  # can I do this with an existing blur method?
+  # or add one above?
+  # or change name of one above?
   def blur(distance)
   end
 
