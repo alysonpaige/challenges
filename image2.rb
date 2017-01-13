@@ -8,14 +8,14 @@ class Image
   def output_image
     @img.each do |row|
       row.each do |pixel|
-        print pixel # why use print instead of puts here?
+        print pixel
       end
       puts
     end
   end
 
   # need to understand what is happening here
-  # and transforming better
+  # transforming
   def blur(row_index, col_index)
     if row_index != 0
       @img[row_index-1][col_index] = 1

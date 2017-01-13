@@ -71,8 +71,8 @@ img.output_image
 # afterImage.output_image
 
 # afterImage = Image.new([
-#   [0, 1, 0, 0],
 #   [1, 1, 1, 1],
-#   [0, 1, 1, 1],
-#   [0, 0, 0, 1]
+#   [1, 1, 1, 1],
+#   [1, 1, 1, 1],
+#   [0, 1, 1, 1]
 # ])
