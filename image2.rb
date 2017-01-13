@@ -14,8 +14,7 @@ class Image
     end
   end
 
-  # need to understand what is happening here
-  # transforming
+  # need to understand better
   def blur(row_index, col_index)
     if row_index != 0
       @img[row_index-1][col_index] = 1
@@ -44,7 +43,7 @@ class Image
         end
     end
   end
-    # cycle through one_pixel array and blur those pixels
+    # cycle through one_pixels array and blur pixels
     one_pixels.each do |pair|
     row_index, col_index = pair
     blur(row_index, col_index)
