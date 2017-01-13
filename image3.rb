@@ -38,7 +38,8 @@ class Image
   # def blur(distance)
   # end
 
-  def transform
+  def transform(x)
+    x.times do 
     one_pixels = []
     @img.each_with_index do |row, row_index|
       row.each_with_index do |pixel, col_index|
@@ -51,8 +52,9 @@ class Image
     # if statement
     # empty array.push(-row_index, col_index)
     one_pixels.each do |row_col|
-    row_index, col_index = row_col
-    blur(row_index, col_index)
+      row_index, col_index = row_col
+      blur(row_index, col_index)
+    end
   end
     return Image.new(@img)
   end
@@ -60,11 +62,14 @@ end
 
 img = Image.new([
   [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
   [0, 1, 0, 0],
-  [0, 0, 0, 1],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
   [0, 0, 0, 0]
 ])
-img.transform
+img.transform(3)
 img.output_image
 
 # afterImage = image.transform
