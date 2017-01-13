@@ -5,6 +5,15 @@ class Image
     @img = array
   end
 
+  def output_image
+    @img.each do |row|
+      row.each do |pixel|
+        print pixel
+      end
+      puts
+    end
+  end
+
   def blur(row_index, col_index)
     if row_index != 0
       @img[row_index-1][col_index] = 1
@@ -24,8 +33,10 @@ class Image
   # can I do this with an existing blur method?
   # or add one above?
   # or change method name of one above?
-  def blur(distance)
-  end
+  # or just add loop to existing code?
+  # diagonal blur?
+  # def blur(distance)
+  # end
 
   def transform
     one_pixels = []
@@ -35,23 +46,16 @@ class Image
           one_pixels.push([row_index, col_index])
         end
     end
-  end  
+  end
+    # add empty array here to store?
+    # if statement
+    # empty array.push(-row_index, col_index)
     one_pixels.each do |row_col|
     row_index, col_index = row_col
     blur(row_index, col_index)
   end
     return Image.new(@img)
   end
-
-  def output_image
-    @img.each do |row|
-      row.each do |pixel|
-        print pixel
-      end
-      puts
-    end
-  end
-
 end
 
 img = Image.new([
