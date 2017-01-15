@@ -1,4 +1,4 @@
-# image blur 2, test blur
+# image blur 2, test refactor blur
 
 class Image
   attr_accessor :img
@@ -17,36 +17,36 @@ class Image
   end
 
   def blur(row_index, col_index)
+    # top blur
     row = row_index - 1
     if row > -1
       @img[row][col_index] = 1
     end
- 
-    # if col_index != 0
-    #   @img[row_index][col_index-1] = 1
-    # end
-    # first_row = img[0]
-    # if col_index != first_row.length-1
-    #   @img[row_index][col_index+1] = 1
-    # end
-    # if row_index != img.length-1
-    #   @img[row_index+1][col_index] = 1
-    # end
+    # left blur
+    row = col_index - 1
+    if row > -1
+      @img[row_index][row] = 1
+    end
+    # right blur
+    row = img[0]
+    if col_index != row.length-1
+      @img[row_index][col_index+1] = 1
+    end
+    # bottom blur
+    if row_index != img.length-1
+      @img[row_index+1][col_index] = 1
+    end
   end
 
-  # build new img in one_pixels array and return blurred img
   def transform
     one_pixels = []
-    # loop through all rows and pixels
     @img.each_with_index do |row, row_index|
       row.each_with_index do |pixel, col_index|
-        # finding ones and adding to one_pixels array
         if pixel == 1
           one_pixels.push([row_index, col_index])
         end
     end
   end
-    # cycle through one_pixels array and blur pixels
     one_pixels.each do |pair|
     row_index, col_index = pair
     blur(row_index, col_index)
