@@ -14,7 +14,6 @@ class Image
     end
   end
 
-  # need to understand better
   def blur(row_index, col_index)
     if row_index != 0
       @img[row_index-1][col_index] = 1
@@ -60,13 +59,3 @@ img = Image.new([
 ])
 img.transform
 img.output_image
-
-# afterImage = image.transform
-# afterImage.output_image
-
-# afterImage = Image.new([
-#   [0, 1, 0, 0],
-#   [1, 1, 1, 1],
-#   [0, 1, 1, 1],
-#   [0, 0, 0, 1]
-# ])
