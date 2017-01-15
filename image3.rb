@@ -60,13 +60,3 @@ img = Image.new([
 ])
 img.transform(3)
 img.output_image
-
-# afterImage = image.transform
-# afterImage.output_image
-
-# afterImage = Image.new([
-#   [1, 1, 1, 1],
-#   [1, 1, 1, 1],
-#   [1, 1, 1, 1],
-#   [0, 1, 1, 1]
-# ])
