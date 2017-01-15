@@ -30,14 +30,6 @@ class Image
     end
   end
 
-  # can I do this with an existing blur method?
-  # or add one above?
-  # or change method name of one above?
-  # or just add loop to existing code?
-  # diagonal blur?
-  # def blur(distance)
-  # end
-
   def transform(x)
     x.times do 
     one_pixels = []
@@ -48,9 +40,6 @@ class Image
         end
     end
   end
-    # add empty array here to store?
-    # if statement
-    # empty array.push(-row_index, col_index)
     one_pixels.each do |row_col|
       row_index, col_index = row_col
       blur(row_index, col_index)
