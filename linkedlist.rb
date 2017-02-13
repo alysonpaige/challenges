@@ -8,6 +8,7 @@ class Stack
     # Push a value onto the stack
     def push(value)
         # IMPLEMENT ME!
+        print "#{value} -->"
         stack.push(1)
     end
 
