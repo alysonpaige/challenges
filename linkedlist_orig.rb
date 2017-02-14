@@ -5,46 +5,46 @@ class LinkedListNode
     @value = value
     @next_node = next_node
   end
+
+  def print_values(list_node)
+      if list_node
+        print "#{list_node.value} --> "
+        print_values(list_node.next_node)
+      else
+        print "nil\n"
+        return
+      end
+  end
 end
 
 class Stack
     attr_reader :data
 
     def initialize
-        @data = []
+        @data = nil
     end
 
     # Push a value onto the stack
     def push(value)
-      # @data = Stack.new(value, @data)
-      @data.push(value)
+      @data = Stack.new(value, @data)
+      stack.push(1)
     end
 
     # Pop an item off the stack.
     # Remove the last item that was pushed
     # and return the value to the user
     def pop
-      @data.pop
+      puts stack.pop
       # print "#{value} -->"
     end
-end
 
-def reverse_list(list)
-    stack = Stack.new
-    while list
-        stack.push(list)
-        list = list.next_node
-    end
-    return stack
-end
-
-def print_values(list_node)
-    if list_node
-      print "#{list_node.value} --> "
-      print_values(list_node.next_node)
-    else
-      print "nil\n"
-      return
+    def reverse_list(list)
+        # ADD CODE HERE
+        while list
+            # ADD CODE HERE
+            list = list.next_node # removes top
+        end
+        return Stack.new(@data)
     end
 end
 
@@ -56,10 +56,6 @@ print_values(node3)
 
 puts "-------"
 
-revstack = reverse_list(node3)
+revlist = reverse_list(node3)
 
-puts revstack.pop.value
-puts revstack.pop.value
-puts revstack.pop.value
-
-# print_values(revlist)
+print_values(revlist)
