@@ -40,10 +40,9 @@ class Stack
 
     def reverse_list(list)
         # ADD CODE HERE
-
         while list
             # ADD CODE HERE
-            list = list.next_node
+            list = list.next_node # removes top
         end
         return Stack.new(@data)
     end
