@@ -16,26 +16,25 @@ class Stack
 
     # Push a value onto the stack
     def push(value)
-      @data = Stack.new(value, @data)
-      stack.push(1)
+      @value.push
     end
 
     # Pop an item off the stack.
     # Remove the last item that was pushed
     # and return the value to the user
     def pop
-      puts stack.pop
-      # print "#{value} -->"
+      @value.pop
+      puts "#{value} -->"
     end
 end
 
 def reverse_list(list)
-    # ADD CODE HERE
+    stack = Stack.new
     while list
-        # ADD CODE HERE
-        list = list.next_node # removes top
+        list.push
+        list = list.next_node
     end
-    return Stack.new(@data)
+    return stack
 end
 
 def print_values(list_node)
