@@ -5,16 +5,6 @@ class LinkedListNode
     @value = value
     @next_node = next_node
   end
-
-  def print_values(list_node)
-      if list_node
-        print "#{list_node.value} --> "
-        print_values(list_node.next_node)
-      else
-        print "nil\n"
-        return
-      end
-  end
 end
 
 class Stack
@@ -37,14 +27,24 @@ class Stack
       puts stack.pop
       # print "#{value} -->"
     end
+end
 
-    def reverse_list(list)
+def reverse_list(list)
+    # ADD CODE HERE
+    while list
         # ADD CODE HERE
-        while list
-            # ADD CODE HERE
-            list = list.next_node # removes top
-        end
-        return Stack.new(@data)
+        list = list.next_node # removes top
+    end
+    return Stack.new(@data)
+end
+
+def print_values(list_node)
+    if list_node
+      print "#{list_node.value} --> "
+      print_values(list_node.next_node)
+    else
+      print "nil\n"
+      return
     end
 end
 
