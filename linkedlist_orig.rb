@@ -16,7 +16,7 @@ class Stack
 
     # Push a value onto the stack
     def push(value)
-      @value.push
+      @data = LinkedListNode.new(value, @data)
     end
 
     # Pop an item off the stack.
@@ -58,3 +58,14 @@ puts "-------"
 revlist = reverse_list(node3)
 
 print_values(revlist)
+
+# s = Stack.new
+# s.push(1)
+# s.push(2)
+# s.push(3)
+
+# s.pop # => 3
+# s.pop # => 2
+# s.push(4)
+# s.pop # => 4
+# s.pop # => 1
