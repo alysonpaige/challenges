@@ -36,6 +36,7 @@ def reverse_list(list)
         list = list.next_node
     end
     return stack
+    # until stack is empty, pop off the stack, printing each node
 end
 
 def print_values(list_node)
@@ -59,6 +60,10 @@ puts "-------"
 revlist = reverse_list(node3)
 
 print_values(revlist)
+
+# revlist do |node|
+#   print_values(node)
+# end
 
 # s = Stack.new
 # s.push(1)
