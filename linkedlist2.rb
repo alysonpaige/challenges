@@ -7,31 +7,13 @@ class LinkedListNode
   end
 end
 
-class Stack
-    attr_reader :data
+# change value of next_node
+# as list is traversed
+# return value of new head node
+# which is previous tail node
 
-    def initialize
-        @data = nil
-    end
-
-    def push(value)
-      @data = LinkedListNode.new(value, @data)
-    end
-
-    def pop
-      node_value = @data.value
-      @data = @data.next_node
-      return node_value
-    end
-end
-
-def reverse_list(list)
-    stack = Stack.new
-    while list
-        stack.push(list.value)
-        list = list.next_node
-    end
-    stack.data
+def reverse_list(list, previous=nil)
+  # do stuff
 end
 
 def print_values(list_node)
