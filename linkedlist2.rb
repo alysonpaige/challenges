@@ -13,17 +13,29 @@ end
 # which is previous tail node
 
 def reverse_list(list, previous=nil)
-  # do stuff
+  previous = nil
+  while list
+    current_node = list
+    next_node = current_node.next_node
+    current_node.next_node = previous
+    list = next_node
+    previous = current_node
+  end
+  current_node
+  # if list
+  #   next_node = list.next_node
+  #   list.next_node = previous
+  #   reverse_list(next_node, list)
+  # end
 end
 
 def print_values(list_node)
-    if list_node
-      print "#{list_node.value} --> "
-      print_values(list_node.next_node)
-    else
-      print "nil\n"
-      return
-    end
+  print "#{list_node.value} --> "
+  if list_node.next_node.nil?
+    print "nil\n"
+  else
+    print_values(list_node.next_node)
+  end
 end
 
 node1 = LinkedListNode.new(37)
