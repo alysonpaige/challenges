@@ -1,32 +1,40 @@
-class Soccer(field, goal)
-  attr_accessor :field, :goal
+class Soccer
+  attr_accessor :team, :stadium, :location
 
-  def initialize(field, goal)
-    @field = field
-    @goal = goal
+  def initialize(team, stadium, location)
+    @team = team
+    @stadium = stadium
+    @location = location
+  end
+
+  def output
+    puts "#{team}'s #{stadium} stadium is based in #{location}."
   end
 end
 
-class Team
-  def ball
-  end
+soccer = Soccer.new("FC Barcelona", "Camp Nou", "Barcelona, Spain")
+soccer.output
 
-  def logo
-  end
-end
+# class Team
+#   def ball
+#   end
 
-class Player < Team
-  def jersey
-  end
+#   def logo
+#   end
+# end
 
-  def boot
-  end
-end
+# class Player < Team
+#   def jersey
+#   end
 
-class LeoMessi < Player
-  def number
-  end
+#   def boot
+#   end
+# end
 
-  def captain
-  end
-end
+# class LeoMessi < Player
+#   def number
+#   end
+
+#   def captain
+#   end
+# end
