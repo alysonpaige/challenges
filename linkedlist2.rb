@@ -12,7 +12,7 @@ def reverse_list(list, previous=nil)
     old_node = list.next_node # store 99 in old_node, move on to next_node in list
     list.next_node = previous # next_node is equal to previous node, previous is nil
     previous = list # modifies list to make 12 -> nil
-    list = old_node # 
+    list = old_node
   end
   previous
 end
@@ -23,7 +23,6 @@ def print_values(list_node)
     print_values(list_node.next_node)
   else
     print "nil\n"
-    return
   end
 end
 

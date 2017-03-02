@@ -31,7 +31,7 @@ end
 
 def reverse_list(list)
     stack = Stack.new
-    while list # != nil
+    while list
         stack.push(list.value)
         list = list.next_node
     end
@@ -44,7 +44,6 @@ def print_values(list_node)
       print_values(list_node.next_node)
     else
       print "nil\n"
-      return
     end
 end
 
