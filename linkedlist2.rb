@@ -7,34 +7,23 @@ class LinkedListNode
   end
 end
 
-# change value of next_node
-# as list is traversed
-# return value of new head node
-# which is previous tail node
-
 def reverse_list(list, previous=nil)
-  previous = nil
-  while list
-    current_node = list
-    next_node = current_node.next_node
-    current_node.next_node = previous
-    list = next_node
-    previous = current_node
+  while list != nil # as long as next node isn't nil
+    old_node = list.next_node # store 99 in old_node, move on to next_node in list
+    list.next_node = previous # next_node is equal to previous node, previous is nil
+    previous = list # modifies list to make 12 -> nil
+    list = old_node # 
   end
-  current_node
-  # if list
-  #   next_node = list.next_node
-  #   list.next_node = previous
-  #   reverse_list(next_node, list)
-  # end
+  previous
 end
 
 def print_values(list_node)
-  print "#{list_node.value} --> "
-  if list_node.next_node.nil?
-    print "nil\n"
-  else
+  if list_node
+    print "#{list_node.value} --> "
     print_values(list_node.next_node)
+  else
+    print "nil\n"
+    return
   end
 end
 
@@ -49,3 +38,20 @@ puts "-------"
 revlist = reverse_list(node3)
 
 print_values(revlist)
+
+# current: 12 -> 99 -> 37 -> nil
+# old_node: 99 -> 37 -> nil
+# list: 12 -> nil
+# previous: 12 -> nil
+# list: 99 -> 37 -> nil
+# old_node: 37 -> nil
+# list: 99 -> 12 -> nil
+# previous: 99 -> 12 -> nil
+# list: 37 -> nil
+# old_node: nil
+# list: 37 -> 99 -> 12 -> nil
+# previous: 37 -> 99 -> 12 -> nil
+# list: nil
+
+# end: 37 -> 99 -> 12 -> nil
+# list at middle go first
