@@ -22,11 +22,6 @@ def reverse_list(list, previous=nil)
     previous = current_node
   end
   current_node
-  # if list
-  #   next_node = list.next_node
-  #   list.next_node = previous
-  #   reverse_list(next_node, list)
-  # end
 end
 
 def print_values(list_node)
