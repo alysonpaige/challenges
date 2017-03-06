@@ -1,3 +1,5 @@
+# using recursion
+
 class LinkedListNode
   attr_accessor :value, :next_node
 
@@ -14,14 +16,10 @@ class Stack
         @data = nil
     end
 
-    # Push a value onto the stack
     def push(value)
       @data = LinkedListNode.new(value, @data)
     end
 
-    # Pop an item off the stack.
-    # Remove the last item that was pushed
-    # and return the value to the user
     def pop
       node_value = @data.value
       @data = @data.next_node
@@ -29,12 +27,21 @@ class Stack
     end
 end
 
+# base case (where the recursion stops)
+# recursive step (with computation adavanced to next item)
+# def reverse_list(list, stack = Stack.new)
+#   return stack.data if list.nil?
+
+#   stack.push(list.value)
+#   reverse_list(list.next_node)
+# end
+
 def reverse_list(list)
-    stack = Stack.new
-    while list
-        stack.push(list.value)
-        list = list.next_node
-    end
+  stack = Stack.new
+  if list != nil
+    stack.push(list.value)
+    reverse_list(list.next_node)
+  end
     stack.data
 end
 

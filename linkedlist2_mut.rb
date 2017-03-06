@@ -1,3 +1,5 @@
+# using mutation
+
 class LinkedListNode
   attr_accessor :value, :next_node
 
@@ -7,12 +9,12 @@ class LinkedListNode
   end
 end
 
-def reverse_list(list, previous=nil)
-  while list != nil # as long as next node isn't nil
-    old_node = list.next_node # store 99 in old_node, move on to next_node in list
-    list.next_node = previous # next_node is equal to previous node, previous is nil
-    previous = list # modifies list to make 12 -> nil
-    list = old_node
+def reverse_list(head, previous=nil)
+  while head != nil # as long as next node isn't nil
+    old_node = head.next_node # store 99 in old_node, move on to next_node in list
+    head.next_node = previous # next_node is equal to previous node, previous is nil
+    previous = head # modifies list to make 12 -> nil
+    head = old_node
   end
   previous
 end
