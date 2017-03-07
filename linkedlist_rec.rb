@@ -37,6 +37,7 @@ end
 # end
 
 def reverse_list(list, stack = Stack.new)
+  
   if list != nil
     stack.push(list.value)
     reverse_list(list.next_node)
