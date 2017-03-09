@@ -10,21 +10,21 @@ class LinkedListNode
 end
 
 class Stack
-    attr_reader :data
+  attr_reader :data
 
-    def initialize
-        @data = nil
-    end
+  def initialize
+    @data = nil
+  end
 
-    def push(value)
-      @data = LinkedListNode.new(value, @data)
-    end
+  def push(value)
+    @data = LinkedListNode.new(value, @data)
+  end
 
-    def pop
-      node_value = @data.value
-      @data = @data.next_node
-      return node_value
-    end
+  def pop
+    node_value = @data.value
+    @data = @data.next_node
+    return node_value
+  end
 end
 
 # base case (where the recursion stops)
@@ -37,10 +37,9 @@ end
 # end
 
 def reverse_list(list, stack = Stack.new)
-  
   if list != nil
     stack.push(list.value)
-    reverse_list(list.next_node)
+    reverse_list(list.next_node, stack)
   end
     stack.data
 end
