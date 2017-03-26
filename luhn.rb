@@ -12,3 +12,21 @@ class individual_cc
   end
 end
 
+def validCC(cardNumber)
+  sum = 0
+  nums = cardNumber.to_s.split("")
+  nums.insert(nums.size, "x")
+  nums.reverse!
+  nums.each_with_index do |n, i|
+      if !n.eql?("x")
+          sum += (i % 2 == 0) ? n.to_i : n.to_i * 2
+      end
+  end
+  if (sum % 10) == 0
+      return true
+  else
+      return false
+  end
+end
+
+# no class, just method?
