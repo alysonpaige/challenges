@@ -1,4 +1,4 @@
-class individual_cc
+class Luhn
   def start_from_right_2x_digits
   end
 
@@ -28,5 +28,3 @@ def validCC(cardNumber)
       return false
   end
 end
-
-# no class, just method?
