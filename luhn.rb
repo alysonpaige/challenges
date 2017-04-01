@@ -1,30 +1,29 @@
-class Luhn
-  def start_from_right_2x_digits
+module Luhn
+  # why module, not class?
+  # initialize v. new?
+
+  def self.is_valid?(number)
+    self.new.is_valid?(number)
   end
 
-  def if_value_greater_10
+  def is_valid?(number)
+    sum = 0
+    number_array = number.to_s.split('') # break cc into ind. digits
+    number_array = number_array.reverse # start from the right
+
+    # loop through every digit_with_index and add the digit to the sum
+    number_array.each_with_index do |digit, index|
+    if (index % 2 != 0) # every other number starting with the first
+      sum += digit.to_i * 2 >= 10 ? digit.to_i*2-9 : digit.to_i*2
+    else
+      sum += digit.to_i
+    end
   end
 
-  def sum_digits
-  end
-
-  def sum_divisible
-  end
-end
-
-def validCC(cardNumber)
-  sum = 0
-  nums = cardNumber.to_s.split("")
-  nums.insert(nums.size, "x")
-  nums.reverse!
-  nums.each_with_index do |n, i|
-      if !n.eql?("x")
-          sum += (i % 2 == 0) ? n.to_i : n.to_i * 2
-      end
-  end
-  if (sum % 10) == 0
+    if (sum % 10) == 0
       return true
-  else
+    else
       return false
+    end
   end
 end
