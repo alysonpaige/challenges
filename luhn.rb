@@ -25,7 +25,7 @@ module Luhn
     end
   end
 
-  # Luhn algo explanation, etc.
+  # Why use self here and separate this method?
   def self.odd_value_sum(digit)
     doubled = digit * 2
 
