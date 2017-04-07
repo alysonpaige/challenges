@@ -18,9 +18,13 @@ module Luhn
       end
     end
 
+    if (sum % 10) == 0
+      return true
+    else
+      return false
+    end
   end
 
-  # Why use self here and separate this method?
   def self.odd_value_sum(digit)
     doubled = digit * 2
 
