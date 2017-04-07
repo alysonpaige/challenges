@@ -18,11 +18,6 @@ module Luhn
       end
     end
 
-    if (sum % 10) == 0
-      return true
-    else
-      return false
-    end
   end
 
   # Why use self here and separate this method?

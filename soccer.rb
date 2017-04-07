@@ -8,7 +8,7 @@ class Soccer
   end
 
   def output
-    puts "#{team}'s #{stadium} stadium is based in #{location}."
+    print "#{team}'s #{stadium} stadium is based in #{location}."
   end
 end
 
