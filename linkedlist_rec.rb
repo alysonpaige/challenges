@@ -1,4 +1,4 @@
-# using recursion
+# recursive
 
 class LinkedListNode
   attr_accessor :value, :next_node
@@ -27,15 +27,6 @@ class Stack
   end
 end
 
-# base case (where the recursion stops)
-# recursive step (with computation adavanced to next item)
-# def reverse_list(list, stack = Stack.new)
-#   return stack.data if list.nil?
-
-#   stack.push(list.value)
-#   reverse_list(list.next_node)
-# end
-
 def reverse_list(list, stack = Stack.new)
   if list != nil
     stack.push(list.value)
@@ -45,12 +36,12 @@ def reverse_list(list, stack = Stack.new)
 end
 
 def print_values(list_node)
-    if list_node
-      print "#{list_node.value} --> "
-      print_values(list_node.next_node)
-    else
-      print "nil\n"
-    end
+  if list_node
+    print "#{list_node.value} --> "
+    print_values(list_node.next_node)
+  else
+    print "nil\n"
+  end
 end
 
 node1 = LinkedListNode.new(37)

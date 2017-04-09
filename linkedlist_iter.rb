@@ -1,4 +1,4 @@
-# using iteration
+# iterative
 
 class LinkedListNode
   attr_accessor :value, :next_node
@@ -10,43 +10,43 @@ class LinkedListNode
 end
 
 class Stack
-    attr_reader :data
+  attr_reader :data
 
-    def initialize
-        @data = nil
-    end
+  def initialize
+    @data = nil
+  end
 
-    # Push a value onto the stack
-    def push(value)
-      @data = LinkedListNode.new(value, @data)
-    end
+  # Push a value onto the stack
+  def push(value)
+    @data = LinkedListNode.new(value, @data)
+  end
 
-    # Pop an item off the stack.
-    # Remove the last item that was pushed
-    # and return the value to the user
-    def pop
-      node_value = @data.value
-      @data = @data.next_node
-      return node_value
-    end
+  # Pop an item off the stack.
+  # Remove the last item that was pushed
+  # and return the value to the user
+  def pop
+    node_value = @data.value
+    @data = @data.next_node
+    return node_value
+  end
 end
 
 def reverse_list(list)
-    stack = Stack.new
-    while list
-      stack.push(list.value)
-      list = list.next_node
-    end
-      stack.data
+  stack = Stack.new
+  while list
+    stack.push(list.value)
+    list = list.next_node
+  end
+    stack.data
 end
 
 def print_values(list_node)
-    if list_node
-      print "#{list_node.value} --> "
-      print_values(list_node.next_node)
-    else
-      print "nil\n"
-    end
+  if list_node
+    print "#{list_node.value} --> "
+    print_values(list_node.next_node)
+  else
+    print "nil\n"
+  end
 end
 
 # iterative print_values method:
