@@ -1,24 +1,22 @@
 # fibonacci iterative
 
-# num represents fib index number
-# loop (num) of times
-# store new values
-# after executing math
-# alternatively, could store in array and .each loop
+# num is fib index number
+# alternatively, could store in array
+# and use (0..num) each loop
 def fib(num)
-  fib0 = 0
-  fib1 = 1
+  f0 = 0
+  f1 = 1
   num.times do
-    fib0, fib1 = fib1, fib0 + fib1
+    f0, f1 = f1, f0 + f1
   end
-  return fib0
+  return f0
 end
 
-puts fib(35)
+puts fib(7)
 
-# require 'benchmark'
-# num = 35
-# Benchmark.bm do |x|
-#   x.report("recursive_fib") { recursive_fib(num) }
-#   x.report("iterative_fib")  { iterative_fib(num)  }
-# end
+require 'benchmark'
+num = 35
+Benchmark.bm do |x|
+  x.report("recursive_fib") { recursive_fib(num) }
+  x.report("iterative_fib")  { iterative_fib(num)  }
+end
