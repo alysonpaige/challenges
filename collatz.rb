@@ -20,3 +20,9 @@ def longest_collatz_seq(n)
 end
 
 puts longest_collatz_seq(1_000_000)
+
+require 'benchmark'
+n = 1_000_000
+Benchmark.bm do |x|
+  x.report("longest_collatz_seq")  { longest_collatz_seq(n) }
+end
