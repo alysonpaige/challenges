@@ -9,20 +9,24 @@ def length_of_collatz_sequence(n, counter = 0)
 end
 
 def longest_collatz_seq(n)
-  longest_sequence = 0
+  longest_sequence_length = 0
   (1..n).each do |n|
     seq_length = length_of_collatz_sequence(n)
-    if seq_length > longest_sequence
-      longest_sequence = seq_length
+    if seq_length > longest_sequence_length
+      longest_sequence_length = seq_length
     end
   end
-  longest_sequence
+  longest_sequence_length
 end
 
 puts longest_collatz_seq(1_000_000)
 
-require 'benchmark'
-n = 1_000_000
-Benchmark.bm do |x|
-  x.report("longest_collatz_seq")  { longest_collatz_seq(n) }
-end
+# n = 1_000_000
+# longest_sequence_length = 525
+# input "n" has sequence length of 525
+
+# require 'benchmark'
+# n = 1_000_000
+# Benchmark.bm do |x|
+#   x.report("longest_collatz_seq")  { longest_collatz_seq(n) }
+# end
