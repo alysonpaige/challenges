@@ -1,16 +1,16 @@
 def length_of_collatz_sequence(i)
   counter = 1
-  if i == 1
-    return counter
-  elsif i % 2 == 0
-    counter += 1
-    i = i / 2
-  else
-    i = i * 3 + 1
+  while i != 1
+    if i % 2 == 0
+      i = i / 2
+      counter += 1
+    else
+      i = i * 3 + 1
+      counter += 1
+    end
   end
+  return counter
 end
-
-# use case/when statement or array instead?
 
 # def length_of_collatz_sequence(i)
 #   counter = 1
