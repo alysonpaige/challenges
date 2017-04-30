@@ -23,4 +23,4 @@ seventh_node = Tree.new(7, [sixth_node])
 shallow_fifth_node = Tree.new(5, [ninth_node])
 
 # The "Trunk" of the tree
-trunk   = Tree.new(2, [seventh_node, shallow_fifth_node])
+trunk = Tree.new(2, [seventh_node, shallow_fifth_node])
