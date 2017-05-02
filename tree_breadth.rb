@@ -24,8 +24,7 @@ def bfs(nodes, value)
     return node if node.payload == value
     next_search_list.push(*node.children)
   end
-
-  # puts for debugging
+  
   bfs(next_search_list, value)
 end
 
