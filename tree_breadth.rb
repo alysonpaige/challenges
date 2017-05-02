@@ -14,6 +14,21 @@ class MyQueue
   end
 end
 
+def bfs(nodes, value)
+  search_list = Array(nodes)
+  return nil if search_list.empty?
+  next_search_list = []
+
+  search_list.each do |node|
+    print("#{node.payload} -> ")
+    return node if node.payload == value
+    next_search_list.push(*node.children)
+  end
+
+  # puts for debugging
+  bfs(next_search_list, value)
+end
+
 
 queue = MyQueue.new
 
