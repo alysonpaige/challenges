@@ -6,11 +6,12 @@ class Tree
     @children = children
   end
 
-  def dfs(node, value)
-    return node if node.payload == value
+  def dfs(node, value, unvisited=[])
+    return node if node.payload == 11
+    print("#{node.payload} -> ")
     node.children.each do |child|
-      found = dfs(child, value)
-      return found if found
+      found = dfs(child, value, unvisited)
+      return value
     end
   end
 
@@ -29,3 +30,4 @@ shallow_fifth_node = Tree.new(5, [ninth_node])
 
 # The "Trunk" of the tree
 trunk = Tree.new(2, [seventh_node, shallow_fifth_node])
+dfs(trunk, 11)
