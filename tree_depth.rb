@@ -16,7 +16,7 @@ def dfs(node, value, unvisited=[])
   return nil if node.children.empty? && unvisited.empty?
   
   if node.children.count == 0 # if no children, 5, 11, 4
-    pus "/n" # new line in output
+    print "/n" # new line in output
     child = unvisited.pop # pop the first child
     dfs(child, value, unvisited)
 

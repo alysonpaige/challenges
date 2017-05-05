@@ -7,7 +7,7 @@ class Tree
   end
 
   def dfs(node, value, unvisited=[])
-    return node if node.payload == 11
+    return node if node.payload == value
     print("#{node.payload} -> ")
     node.children.each do |child|
       found = dfs(child, value, unvisited)
