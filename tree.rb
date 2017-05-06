@@ -13,10 +13,10 @@ class Tree
     puts @payload
     return self if @payload == 11
     @children.each do |child|
-      var1 = child.dfs
-      if var1 == nil
+      found = child.dfs
+      if found == nil
       else
-        return var1
+        return found
       end
     end
 
