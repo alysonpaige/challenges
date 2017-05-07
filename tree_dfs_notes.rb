@@ -1,3 +1,5 @@
+# 18:15 in video 1 explanation of dfs solution
+
 # 2 -> 7 -> 6 -> 5 ->
 # 11 ->
 # 5 -> 9 -> 4

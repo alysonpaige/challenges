@@ -41,7 +41,7 @@ shallow_fifth_node = Tree.new(5, [ninth_node])
 
 # The "Trunk" of the tree
 trunk = Tree.new(2, [seventh_node, shallow_fifth_node])
-
+puts "---dfs---"
 puts trunk.dfs
 
 class MyQueue
@@ -74,6 +74,7 @@ class MyQueue
 end
 
 queue = MyQueue.new
+puts "---bfs---"
 puts queue.bfs
 
 queue.enqueue(1)
