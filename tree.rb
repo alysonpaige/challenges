@@ -68,7 +68,7 @@ class MyQueue
         # pop, push, enqueue, dequeue
       end
     end
-    return @queue
+    return curr_node # or @queue
   end
 
   # def bfs(nodes, value)
