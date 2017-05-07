@@ -57,19 +57,33 @@ class MyQueue
     @queue.shift
   end
 
-  def bfs(nodes, value)
-    search_list = Array(nodes)
-    return nil if search_list.empty?
-    next_search_list = []
-
-    search_list.each do |node|
-      print("#{node.payload} -> ")
-      return node if node.payload == value
-      next_search_list.push(*node.children)
+  def bfs
+    puts @queue
+    curr_node = @queue.pop
+    return self if @queue == 11
+    while curr_node != 11
+      if curr_node == nil
+        # pop, push, enqueue, dequeue
+      else
+        # pop, push, enqueue, dequeue
+      end
     end
-    
-    bfs(next_search_list, value)
+    return @queue
   end
+
+  # def bfs(nodes, value)
+  #   search_list = Array(nodes)
+  #   return nil if search_list.empty?
+  #   next_search_list = []
+
+  #   search_list.each do |node|
+  #     print("#{node.payload} -> ")
+  #     return node if node.payload == value
+  #     next_search_list.push(*node.children)
+  #   end
+    
+  #   bfs(next_search_list, value)
+  # end
 
 end
 
