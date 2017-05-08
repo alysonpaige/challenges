@@ -28,18 +28,20 @@ class Tree
 
   def bfs
     queue = []
+    
     puts @payload
     while @payload != 11
       queue.shift
       @children.each do |child|
         found = child.bfs
         queue.push(found)
-        # if found == nil
-        # else
-        #   return found
-        # end
+        if @payload == 11
+        else
+          return self
+        end
       end
-    # return nil
+
+      return nil
     end
   end
 
