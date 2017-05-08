@@ -13,7 +13,7 @@ class Tree
   # if 11 is included, return node containing 11
 
   def dfs
-    puts @payload
+    print("#{payload} -> ")
     return self if @payload == 11
     @children.each do |child|
       found = child.dfs
@@ -22,7 +22,6 @@ class Tree
         return found
       end
     end
-
     return nil
   end
 
@@ -30,7 +29,7 @@ class Tree
     queue = []
     queue.push
 
-    puts @payload
+    print("#{payload} -> ")
     return self if @payload == 11
     while @payload != 11
       queue.shift
@@ -42,7 +41,6 @@ class Tree
           return found
         end
       end
-
       return nil
     end
   end
@@ -80,58 +78,56 @@ class MyQueue
     @queue.shift
   end
 
-  def bfs(node)
-    @queue.push(node)
-    puts node
+  # def bfs
+  #   @queue.push(node)
+  #   print("#{node} -> ")
 
-    return self if node == 11
-    while node != 11
-      i = @queue.shift
-      i.node.each do |child|
-        # puts "#{child}"
-        found = child.bfs
-        @queue.push(found)
-        if found == nil
-        else
-          return found
-        end
-      end
+  #   return self if node == 11
+  #   while node != 11
+  #     i = @queue.shift
+  #     i.node.each do |child|
+  #       found = child.bfs
+  #       @queue.push(found)
+  #       if found == nil
+  #       else
+  #         return found
+  #       end
+  #     end
 
-      return nil
-    end
-  end
-
-  # def bfs(nodes, value)
-  #   search_list = Array(nodes)
-  #   return nil if search_list.empty?
-  #   next_search_list = []
-
-  #   search_list.each do |node|
-  #     print("#{node.payload} -> ")
-  #     return node if node.payload == value
-  #     next_search_list.push(*node.children)
+  #     return nil
   #   end
-    
-  #   bfs(next_search_list, value)
   # end
+
+  def bfs(nodes, value)
+    search_list = Array(nodes)
+    return nil if search_list.empty?
+    next_search_list = []
+
+    search_list.each do |child|
+      print ("#{child.payload} -> ")
+      return child if child.payload == value
+      next_search_list.push(*child.children)
+    end
+    bfs(next_search_list, value)
+  end
 
 end
 
 queue = MyQueue.new
 puts "---bfs in MyQueue---"
-puts queue.bfs(2)
+puts queue.bfs(trunk, 11)
 
-queue.enqueue(1)
-queue.enqueue(2)
-puts queue.dequeue
-queue.enqueue(3)
-queue.enqueue(4)
-queue.enqueue(5)
-puts queue.dequeue
-queue.enqueue(6)
-puts queue.dequeue
-puts queue.dequeue
-puts queue.dequeue
-puts queue.dequeue
+# queue.enqueue(1)
+# queue.enqueue(2)
+# puts queue.dequeue
+# queue.enqueue(3)
+# queue.enqueue(4)
+# queue.enqueue(5)
+# puts queue.dequeue
+# queue.enqueue(6)
+# puts queue.dequeue
+# puts queue.dequeue
+# puts queue.dequeue
+# puts queue.dequeue
 
 # Outputs: 1, 2, 3, 4, 5, 6
