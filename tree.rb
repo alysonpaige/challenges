@@ -80,15 +80,26 @@ class MyQueue
     @queue.shift
   end
 
-  # def bfs
-  #   while @queue.empty?
-  #     i = @queue.shift
-  #     puts @payload
-  #     i.children.each do |child|
-  #       @queue.push(child)
-  #     end
-  #   end
-  # end
+  def bfs(node)
+    @queue.push(node)
+    puts node
+
+    return self if node == 11
+    while node != 11
+      i = @queue.shift
+      i.node.each do |child|
+        # puts "#{child}"
+        found = child.bfs
+        @queue.push(found)
+        if found == nil
+        else
+          return found
+        end
+      end
+
+      return nil
+    end
+  end
 
   # def bfs(nodes, value)
   #   search_list = Array(nodes)
@@ -108,7 +119,7 @@ end
 
 queue = MyQueue.new
 puts "---bfs in MyQueue---"
-puts queue.bfs
+puts queue.bfs(2)
 
 queue.enqueue(1)
 queue.enqueue(2)
