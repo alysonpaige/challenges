@@ -26,6 +26,23 @@ class Tree
     return nil
   end
 
+  def bfs
+    queue = []
+    puts @payload
+    while @payload != 11
+      queue.shift
+      @children.each do |child|
+        found = child.bfs
+        queue.push(found)
+        # if found == nil
+        # else
+        #   return found
+        # end
+      end
+    # return nil
+    end
+  end
+
 end
 
 # The "Leafs" of a tree, elements that have no children
@@ -41,8 +58,10 @@ shallow_fifth_node = Tree.new(5, [ninth_node])
 
 # The "Trunk" of the tree
 trunk = Tree.new(2, [seventh_node, shallow_fifth_node])
-puts "---dfs---"
+puts "---dfs in Tree---"
 puts trunk.dfs
+puts "---bfs in Tree---"
+puts trunk.bfs
 
 class MyQueue
   def initialize
@@ -58,17 +77,13 @@ class MyQueue
   end
 
   def bfs
-    puts @queue
-    curr_node = @queue.pop
-    return self if @queue == 11
-    while curr_node != 11
-      if curr_node == nil
-        # pop, push, enqueue, dequeue
-      else
-        # pop, push, enqueue, dequeue
+    while @queue.empty?
+      i = @queue.shift
+      puts @payload
+      i.children.each do |child|
+        @queue.push(child)
       end
     end
-    return curr_node # or @queue
   end
 
   # def bfs(nodes, value)
@@ -88,7 +103,7 @@ class MyQueue
 end
 
 queue = MyQueue.new
-puts "---bfs---"
+puts "---bfs in MyQueue---"
 puts queue.bfs
 
 queue.enqueue(1)
