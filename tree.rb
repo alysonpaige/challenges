@@ -28,16 +28,18 @@ class Tree
 
   def bfs
     queue = []
-    
+    queue.push
+
     puts @payload
+    return self if @payload == 11
     while @payload != 11
       queue.shift
       @children.each do |child|
         found = child.bfs
         queue.push(found)
-        if @payload == 11
+        if found == nil
         else
-          return self
+          return found
         end
       end
 
@@ -78,15 +80,15 @@ class MyQueue
     @queue.shift
   end
 
-  def bfs
-    while @queue.empty?
-      i = @queue.shift
-      puts @payload
-      i.children.each do |child|
-        @queue.push(child)
-      end
-    end
-  end
+  # def bfs
+  #   while @queue.empty?
+  #     i = @queue.shift
+  #     puts @payload
+  #     i.children.each do |child|
+  #       @queue.push(child)
+  #     end
+  #   end
+  # end
 
   # def bfs(nodes, value)
   #   search_list = Array(nodes)
