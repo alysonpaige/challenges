@@ -7,52 +7,45 @@ class BinaryTree
     @right = right
   end
 
-end
-
-class TreeBuilder
-
-  def initialize(input_array)
-    @tree = BinaryTree.new(input_array[0], nil, nil)
-    input_array.shift
-    @array = input_array
+  def to_a
+    return left.to_a + [payload] + right.to_a
   end
 
-  def build
-    array.each do |value|
-      insert_to_tree(value, @tree)
+  def add_node(value)
+    placed = false
+    curr_node = self
+    until placed
+      if value > curr_node.payload
+        if curr_node.right.nil?
+          curr_node.right = BinaryTree.new(value, nil, nil)
+          placed = true
+        else
+          curr_node = curr_node.right
+        end
+      else
+        if curr_node.left.nil?
+          curr_node.left = BinaryTree.new(value, nil, nil)
+          placed = true
+        else
+          curr_node = curr_node.left
+        end
+      end
     end
   end
 
-  def insert_to_tree(value, curr_node)
-    if value < curr_node.payload && curr_node.left == nil
-      curr_node.left = BinaryTree.new(value, nil, nil)
-    elsif value > curr_node.payload && curr_node.right == nil
-      curr_node.right = BinaryTree.new(value, nil, nil)
-    elsif value < curr_node.payload
-      insert_to_tree(value, curr_node.right)
+  def self.sort(array)
+    return nil if array.nil?
+
+    btree = BinaryTree.new(array.shift, nil, nil)
+    until array.count == 0
+      btree.add_node(array.shift)
     end
+
+    return btree.to_a
   end
 
 end
 
-  # def initialize
-  #   @treesort = []
-  # end
-
-  # def self.sort(array)
-  #   tree_representation = build_tree(array)
-  #   return flatten_tree(tree_representation)
-  # end
-
-  # def flatten_tree(tree)
-  #   # build new array, flattening the tree
-  # end
-
-  # def build_tree(array)
-  #   first = array[0]
-  #   tree = BinaryTree.new(first, nil, nil)
-  #   rest = array.last(array.length - 1)
-  # end
 
 seven = BinaryTree.new(7, nil, nil)
 five  = BinaryTree.new(5, nil, nil)
