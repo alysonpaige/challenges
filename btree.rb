@@ -55,7 +55,9 @@ three = BinaryTree.new(3, nil, six)
 two   = BinaryTree.new(2, four, five)
 trunk = BinaryTree.new(1, two, three)
 
-puts trunk
+array = [7, 4, 9, 1, 6, 14, 10]
 
-# array = [7, 4, 9, 1, 6, 14, 10]
+p trunk.to_a
+p BinaryTree.sort(array)
+
 # expected sort = [1, 4, 6, 7, 9, 10, 14]
