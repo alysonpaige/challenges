@@ -1,12 +1,18 @@
 "use strict";
 
 var _ = {
-    // Implements:
-    // https://lodash.com/docs#join
-    join: (array, separator = ',') => {
-        return 'FAIL :(';
+    join: (array, separator) => {
+      var result = "";
+      var sep = ", ";
+      var i;
+      for (i=0; i < x.length; i++) {
+        result = result + x[i] + sep;
+      }
+        return result;
     }
-}
+};
+
+// x is not defined, where to put parameter?
 
 const value = _.join(["hello", "goodbye"], ", ")
 
