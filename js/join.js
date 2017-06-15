@@ -1,19 +1,17 @@
 "use strict";
 
 var _ = {
-    join: (array, separator) => {
+    function join(value) => {
       var result = "";
       var sep = ", ";
       var i;
-      for (i=0; i < x.length; i++) {
-        result = result + x[i] + sep;
+      for (i=0; i < value.length; i++) {
+        result = result + value[i] + sep;
       }
         return result;
     }
 };
 
-// x is not defined, where to put parameter?
+const output = _.join(["hello", "goodbye"], ", ")
 
-const value = _.join(["hello", "goodbye"], ", ")
-
-console.log(value);
+console.log(output);
