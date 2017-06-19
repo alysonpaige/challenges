@@ -1,7 +1,7 @@
 "use strict";
 
 var _ = {
-    function join(value) => {
+    join(value) {
       var result = "";
       var sep = ", ";
       var i;
@@ -12,6 +12,7 @@ var _ = {
     }
 };
 
-const output = _.join(["hello", "goodbye"], ", ")
+const joined = _.join(["hello", "goodbye"], ", ")
+const output = joined.replace(/,\s*$/, "");
 
 console.log(output);
