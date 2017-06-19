@@ -2,9 +2,12 @@
 
 var _ = {
   map(input) {
-    return input.map(function(input) {
-      return input.multiplyBy10;
-    });
+    var arr = [1, 2, 3]
+    var result = arr.map(multiplyBy10);
+    //return input.map(function(input) {
+      //return input.multiplyBy10;
+      return result
+    //});
   }
 };
 
