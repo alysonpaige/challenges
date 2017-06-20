@@ -2,15 +2,11 @@
 
 var _ = {
   map(input) {
-    var result = [];
-    var i;
-    for (i=0; i < input.length; i++) {
-      result = result + input[i];
-    }
-    return result;
-    // return input.map(function(input) {
-    //   return input.multiplyBy10;
-    // });
+    // var arr = [];
+    // arr.push(input);
+    return input.map(function(input) {
+      return input.multiplyBy10;
+    });
   }
 };
 
