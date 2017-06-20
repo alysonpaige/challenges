@@ -2,13 +2,15 @@
 
 var _ = {
   map(input) {
-    // var arr = [];
-    // arr.push(input);
-    return input.map(function(input) {
+    // iterate over array
+    var result = input.map(function(input) {
       return input.multiplyBy10;
     });
+    return result;
   }
 };
+
+// => [ undefined, undefined, undefined ]
 
 // Define a method that multiplies the input by 10
 function multiplyBy10(value) {
