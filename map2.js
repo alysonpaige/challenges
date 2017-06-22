@@ -4,8 +4,14 @@ var _ = {
   map(input) {
     // iterate over array
     var result = input.map(function(input) {
-      return input.multiplyBy10;
+       return input.multiplyBy10;
     });
+    // var iterated = [];
+    // var i;
+    // for(i=0; i < input.length; i++) {
+    //   iterated = iterated + input[i];
+    //   return iterated.multiplyBy10;
+    // }
     return result;
   }
 };
