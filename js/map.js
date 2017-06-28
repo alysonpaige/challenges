@@ -2,8 +2,7 @@
 
 var _ = {
   map(input) {
-    var arr = [1, 2, 3];
-    var result = arr.map(multiplyBy10);
+    var result = input.map(multiplyBy10);
       return result
   }
 };
