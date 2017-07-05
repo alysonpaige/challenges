@@ -22,7 +22,7 @@ function multiplyBy10(value) {
 
 const value = _.map([1, 2, 3], multiplyBy10);
 
-// value => [10, 20, 30]
+// value wanted => [10, 20, 30]
 console.log(value);
 
-// => [ undefined, undefined, undefined ]
+// value received => [ undefined, undefined, undefined ]
