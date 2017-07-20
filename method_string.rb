@@ -22,8 +22,12 @@ method(str)
 # scanned for a certain pattern, in this case [VAL#], and returns an array of occurances
 # "count" is assigned an integer of 0
 # a while loop is initiated which does the following:
-# 
+# while "count" is less than matches.length, increment "count" by 1
+  # e.g. match: if 2nd parameter is present (XX OR [VAL#]),
+  # it specifies position in the string to behin the search
+# if
 
+# for an output of:
 # => ["[VAL2]", "[VAL24]", "[VAL5]", "[VAL7]", "[VAL18]", "[VAL10]"]
 
 # NOTES on regular expressions: (/XX|\[VAL\d*\]/)
