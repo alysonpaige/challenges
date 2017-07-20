@@ -19,8 +19,7 @@ method(str)
 # then the method "method" is defined with a parameter of "string"
 # "values" is assigned an empty array
 # "matches" is assigned the "string" parameter which will be
-# scanned for a certain pattern, in this case [VAL#],
-# and returns an array of occurances
+# scanned for a certain pattern, in this case [VAL#], and returns an array of occurances
 # "count" is assigned an integer of 0
 # a while loop is initiated which does the following:
 # 
@@ -32,4 +31,6 @@ method(str)
 # to match something literally, they must be backslashed e.g. \[VAL\d*\
 # /\d/ is digit
 # * is zero or more times
-# XX| is whitespace?
+# | vertical bar combines two expressions into a single one
+# that matches either expression, like an alternative e.g. XX OR [VAL#]
+
