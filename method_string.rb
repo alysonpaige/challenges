@@ -27,6 +27,8 @@ method(str)
   # it specifies position in the string to behin the search
 # if
 
+# print `values`
+# call the method with an argument of "str"
 # for an output of:
 # => ["[VAL2]", "[VAL24]", "[VAL5]", "[VAL7]", "[VAL18]", "[VAL10]"]
 
