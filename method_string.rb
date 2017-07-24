@@ -17,16 +17,17 @@ method(str)
 
 # a string of latin is assigned to "str" outside of the method
 # then the method "method" is defined with a parameter of "string"
-# "values" is assigned an empty array
-# "matches" is assigned the "string" parameter which will be
-# scanned for a certain pattern, in this case [VAL#], and returns an array of occurances
-# "count" is assigned an integer of 0
+# `values` is assigned an empty array
+# `matches` is assigned the `string` parameter which will be
+# scanned for a certain pattern, in this case [VAL#], and will return an array of occurances
+# `count` is assigned an integer of 0
 # a while loop is initiated which does the following:
-# while "count" is less than matches.length, increment "count" by 1
-  # e.g. match: if 2nd parameter is present (XX OR [VAL#]),
-  # it specifies position in the string to behin the search
-# if
-
+# while `count` is less than the length of matches, increment `count` by 1
+# if `matches` * count is matched to the first regexp /XX/
+  # it specifies the position in the string to begin the search
+# AND the following is true
+# `matches` * count + 1 is matched to the second regexp /\[VAL\d*\]/
+# then `matches` * count + 1 is added to the end of the values array
 # print `values`
 # call the method with an argument of "str"
 # for an output of:
