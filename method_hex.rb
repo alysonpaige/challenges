@@ -12,7 +12,10 @@ p method(0x33BAE7)
 # made to be in upcase and scanned for a regular expression /../
 # map is then run on `hex_pairs` which runs the block for each element
 # and outputs each returned value from the block e.g. [x, y, z]
-# the value `x` is divided by 255.0 and rounded to 2 decimal points e.g. 0.36 vs. 0.1
+# the value `x` is divided by 255.0 and rounded to 2 decimal places e.g. 0.36 vs. 0.1
 # calls the method to be printed with the argument of "0x33BAE7"
 # for an output of:
 # => [0.2, 0.73, 0.91]
+
+# An expression or argument is being scanned for numbers in a string
+# and they are being divided and rounded up to 2 decimal places.

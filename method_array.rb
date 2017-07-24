@@ -13,3 +13,6 @@ method(ray)
 # calls the method with the argument of "ray"
 # for an output of:
 # => [7, 8, 4, 3, 20, 40]
+
+# A block is called to print a new array after counting the defined variable
+# within the array. If the `element` is listed more than once, remove it.

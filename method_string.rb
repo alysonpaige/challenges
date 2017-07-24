@@ -41,3 +41,5 @@ method(str)
 # | vertical bar combines two expressions into a single one
 # that matches either expression, like an alternative e.g. XX OR [VAL#]
 
+# The string is being searched specifically for the parameter defined (e.g. [VAL#])
+# and if found, being added to the array.
