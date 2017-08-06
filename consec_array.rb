@@ -11,6 +11,12 @@ def makeArrayConsecutive2(statues)
   # end
 end
 
+    # if statues.length==1
+    #     return 0
+    # else
+    # return statues[0]==0 ? 0 : (statues[0]>20 || statues[0]<0) ? 0 : (statues[0]-1)
+    # end
+
 p makeArrayConsecutive2([6, 2, 3, 8])
 # => 3
 
