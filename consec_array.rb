@@ -1,6 +1,10 @@
 # make array consecutive
 
 def makeArrayConsecutive2(statues)
+  # statues.??? - statues.??? - statues.???? + 1
+  # statues.min - statues.max - statues.???? + 1
+  # statues[statues.length-1]-statues[0]-statues.length+1
+  
   # statues.sort_by(&:to_i)
   return statues[statues.length-1]-statues[0]-statues.length+1
 
