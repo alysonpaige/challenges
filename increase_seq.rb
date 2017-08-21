@@ -11,5 +11,16 @@ def almostIncreasingSequence(sequence)
   true
 end
 
+# function almostIncreasingSequence(seq) {
+#   seq=seq.slice()
+#   for(var i=0;i<seq.length-1;i++) {
+#     if(seq[i]>=seq[i+1]&&i<seq.length-2){
+#       seq.splice(i,1)
+#       return seq.every((x,j)=>j===seq.length-1||x<seq[j+1])
+#     }
+#   }
+#   return true
+# }
+
 # [1, 10, 7, 9, 8] => false
 # [1, 10, 7, 9, 10] => true
