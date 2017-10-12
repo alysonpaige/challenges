@@ -1,9 +1,7 @@
 function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
   var result = "";
-  // Your code below this line
+  result += "The " + myAdjective + " " + myNoun + " " + myVerb + " by the mailbox " + myAdverb + "!";
   
-
-  // Your code above this line
   return result;
 }
 
