@@ -25,3 +25,12 @@ def get_permutations(string):
           permutations.add(permutation)
 
   return permutations
+
+
+# base case
+# add all numbers 1 to n recursively
+def sum_1_to_n(n):
+  if n <= 1:
+    return 1
+    
+  return n + sum_1_to_n(n-1)
