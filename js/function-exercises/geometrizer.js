@@ -1,16 +1,8 @@
-var pi = 3.14;
-
-function calcCircumference(radius) {
-  radius = (pi * 2) * radius;
-  var msg = "The circumference is " + radius;
-  console.log(msg);
+function calcGeometry(radius) {
+  var circumference = Math.PI * (2 * radius);
+  console.log("The circumference is " + circumference);
+  var area = Math.PI * (radius * radius);
+  console.log("The area is " + area);
 }
 
-function calcArea(radius) {
-  radius = pi * (Math.sqrt(radius));
-  var msg = "The area is " + radius;
-  console.log(msg);
-}
-
-calcCircumference(5);
-calcArea(10);
+calcGeometry(10);
