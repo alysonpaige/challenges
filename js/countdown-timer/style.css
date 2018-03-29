@@ -46,3 +46,24 @@ body {
   padding-top: 5px;
   font-size: 16px;
 }
+
+footer {
+  font-family: sans-serif;
+  color: #000;
+  font-size: 12px;
+}
+
+a:link, a:visited {
+  background-color: #00BF96;
+  color: white;
+  padding: 14px 14px;
+  border-radius: 3px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #00816A;
+  border-radius: 3px;
+}
