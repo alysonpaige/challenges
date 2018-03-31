@@ -14,17 +14,26 @@ body {
 
 .center__div {
   position: absolute;
-  top: 35%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centerh1 {
+  position: absolute;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .hover__div:hover {
   font-size: 33px;
+  transition: all .1s ease;
 }
 
 .hover__div:hover .smalltext {
   font-weight: bold;
+  /* text-transform: uppercase; */
 }
 
 .h1worldcup {
