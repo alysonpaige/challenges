@@ -19,6 +19,14 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.hover__div:hover {
+  font-size: 33px;
+}
+
+.hover__div:hover .smalltext {
+  font-weight: bold;
+}
+
 .h1worldcup {
   color: #396;
   font-weight: 100;
