@@ -83,6 +83,11 @@ body {
   /* text-transform: uppercase; */
 }
 
+/* .time {
+  padding: 15px;
+  margin: 0 auto;
+} */
+
 .footer {
   font-family: sans-serif;
   color: #000;
@@ -153,6 +158,11 @@ button:hover, button:active {
     width: 100%;
     margin: 20px auto;
     white-space: normal;
+  }
+  .time {
+    display: block;
+    margin: 10px;
+    /* white-space: normal; */
   }
 }
 
