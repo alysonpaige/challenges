@@ -166,8 +166,7 @@ button:hover, button:active {
   }
 }
 
-#ballContainer {
-  /* transform: translate(-50%, -50%); */
+/* #ballContainer {
   position: fixed;
   bottom: 40px;
   width: 100%;
@@ -199,4 +198,4 @@ button:hover, button:active {
   0% {left:0px; -webkit-transform: rotate(-360deg);}
   50% {left:1000px; -webkit-transform: rotate(360deg);}
   100% {left:0px; -webkit-transform: rotate(-360deg);}
-}
+} */
