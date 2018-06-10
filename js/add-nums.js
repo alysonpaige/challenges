@@ -12,3 +12,8 @@ function addUp(num) {
 	}
 	return sum;
 }
+
+// Alt solution
+function addUp(num) {
+  return (num * (num + 1))/2;
+}
