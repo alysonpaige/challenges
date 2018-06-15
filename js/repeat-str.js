@@ -10,3 +10,8 @@ function doubleChar(str) {
   const joinStr = mapStr.join('');
   return joinStr;
 }
+
+// Alt solution
+function doubleChar(str) {
+  return str.split('').map(x => x + x).join('');
+}
