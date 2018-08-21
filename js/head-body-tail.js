@@ -17,3 +17,8 @@ function verifySubstrs(mainStr, head, body, tail) {
     return 'Incomplete.';
   }
 };
+
+// alt solution
+function verifySubstrs(mainStr, head, body, tail) {
+  return mainStr.startsWith(head) && mainStr.includes(body) && mainStr.endsWith(tail) ? "My head, body, and tail." : "Incomplete.";
+}
